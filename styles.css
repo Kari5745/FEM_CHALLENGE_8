@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+:root{
+    /*COLORS*/
+    --Cyan: hsl(179, 62%, 43%);
+    --Light-Cyan: hsl(179, 47%, 52%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    /*FONTS*/
+    --Karla: "Karla", sans-serif;
+    --fs-normal:1rem;
+    --fw-400:400;
+    --fw-700:700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2{
+    line-height: 1.1;
+}
+
+ul, li {
+    list-style: none;
+}
+
+button{
+    font: inherit;
+}
+
+body{
+    background-color: var(--Light-Gray);
+    font-family: var(--Karla);
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-400);
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+    padding: 1rem;
+}
+
+/*GENERAL STYLING*/
+
+.top{
+    background-color: white;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.top * + * {
+    margin-top: 1rem;
+}
+
+.title{
+    font-weight: var(--fw-700);
+    color: var(--Cyan);
+}
+
+.highlight{
+    color: var(--Bright-Yellow);
+    font-weight: var(--fw-700);
+}
+
+.bottom{
+    color: var(--Light-Gray);
+}
+
+.subtitle{
+    font-weight: var(--fw-700);
+    margin-bottom: 1rem;
+}
+
+.bottom > *:nth-child(1){
+    background-color: var(--Cyan);
+}
+
+.subscription {
+    padding: 1.5rem;
+
+}
+
+.subscription * + *  {
+    margin-top: .5rem;
+}
+
+.price{
+    font-size: 1.8rem;
+    font-weight: var(--fw-700);
+}
+
+.price span{
+    font-size: .9rem;
+    font-weight: var(--fw-400);
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: .7rem;
+    margin-top: 2rem;
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    font-weight: var(--fw-700);
+    border: none;
+    border-radius: .3rem;
+}
+
+.bottom > *:nth-child(2){
+    background-color: var(--Light-Cyan);
+}
+
+.why-us{
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+/*MEDIA QUERY*/
+@media (min-width: 650px) {
+
+    main{
+        display: grid;
+        place-items: center;
+        min-height: 100dvh;
+    }
+    article{
+        max-width: 660px;
+        border-radius: .6rem;
+        overflow: hidden;
+    }
+
+    .bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subscription {
+        padding: 2rem;
+        place-content: center;
+    }
+
+    .why-us{
+        place-content: center;
+    }
+}
+
